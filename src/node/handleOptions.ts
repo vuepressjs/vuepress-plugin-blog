@@ -151,6 +151,7 @@ export function handleOptions(
       path: indexPath,
       layout: indexLayout,
       scopeLayout,
+      getScopePageTitle,
       frontmatter,
       pagination = {} as PaginationConfig,
     } = frontmatterPage;
@@ -183,6 +184,7 @@ export function handleOptions(
       keys,
       map,
       scopeLayout,
+      getScopePageTitle,
       _handler: curryFrontmatterHandler(id, map, indexPath),
     });
   }

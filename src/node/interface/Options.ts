@@ -2,6 +2,7 @@
  * A Directory-based Classifier
  */
 import { PaginationConfig } from './Pagination';
+import { GetScopePageTitle } from './Frontmatter';
 
 export interface DirectoryClassifier {
   /**
@@ -75,6 +76,10 @@ export interface FrontmatterClassifier {
    * `/tag/vue` will use `Foo.vue` as the layout
    */
   scopeLayout?: string;
+  /**
+   * A function to get the title of scope page dynamically.
+   */
+  getScopePageTitle?: GetScopePageTitle;
   /**
    * Frontmatter for index page.
    */

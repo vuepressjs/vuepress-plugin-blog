@@ -178,6 +178,19 @@ Layout component name for entry page.
 
 Layout component name for scope page.
 
+### getScopePageTitle
+
+- Type: function
+- Default: `See Below`
+
+A function to get the title of scope page dynamically:
+
+```js
+function getScopePageTitle (key) {
+  return `${key} | Directory title`
+}
+```
+
 ### frontmatter
 
 - Type: `Record<string, any>`

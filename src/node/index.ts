@@ -107,6 +107,7 @@ module.exports = (options: BlogPluginOptions, ctx: VuePressContext) => {
               pagination,
               keys,
               scopeLayout,
+              getScopePageTitle,
             } = frontmatterClassifiedPage;
             return Object.keys(map).map(key => {
               const { path, scope } = map[key];
@@ -144,7 +145,9 @@ module.exports = (options: BlogPluginOptions, ctx: VuePressContext) => {
                     scopeLayout,
                     DefaultLayoutEnum.FrontmatterPagination
                   ),
-                  title: `${key} ${entryTitle}`,
+                  title: getScopePageTitle
+                    ? getScopePageTitle(key)
+                    : `${key} ${entryTitle}`,
                 },
               };
             });
