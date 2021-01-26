@@ -4,10 +4,10 @@ tag:
   - Vue
   - VuePress
   - JavaScript
+  - 筆記
 ---
 
 # 透過插件 API 來深入了解 VuePress
-
 
 ## 插件 ???
 

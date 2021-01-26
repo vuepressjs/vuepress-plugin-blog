@@ -21,9 +21,9 @@ export function curryFrontmatterHandler(scope, map, path) {
     if (key) {
       if (!map[key]) {
         map[key] = {};
-        map[key].key = key;
+        map[key].key = encodeURI(key);
         map[key].scope = scope;
-        map[key].path = `${path}${key}/`;
+        map[key].path = `${path}${encodeURI(key)}/`;
         map[key].pageKeys = [];
       }
       map[key].pageKeys.push(pageKey);

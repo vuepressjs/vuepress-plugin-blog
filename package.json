@@ -8,11 +8,11 @@
   },
   "license": "MIT",
   "author": "ULIVZ <chl814@foxmail.com>",
+  "main": "lib/node/index.js",
   "files": [
     "lib",
     "types"
   ],
-  "main": "lib/node/index.js",
   "scripts": {
     "build": "concurrently \"rimraf lib\" \"npm:build:client\" \"npm:build:node\" \"npm:build:components\"",
     "build:client": "tsc -p tsconfig.client.json",
